@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MaiKisaan Sahayak 🌾</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<!-- Floating Chat Button -->
+<div id="chatbot-btn" onclick="toggleChat()">🌾 Chat</div>
+
+<!-- Chatbot -->
+<div class="app hidden" id="chatbot">
+    <header>
+        🌾 MaiKisaan Sahayak
+        <span>AI Farming Assistant</span>
+        <button class="close-btn" onclick="toggleChat()">✖</button>
+    </header>
+
+    <!-- Language Selection -->
+    <div id="language-box" class="language-box">
+        <p>Choose your language</p>
+        <button onclick="selectLanguage('mr')">मराठी</button>
+        <button onclick="selectLanguage('hi')">हिंदी</button>
+        <button onclick="selectLanguage('en')">English</button>
+    </div>
+
+    <!-- Chat Area -->
+    <div id="chat-box" class="hidden"></div>
+
+    <!-- Input -->
+    <div class="input-area hidden" id="input-area">
+        <input type="text" id="message" placeholder="Type here…" />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script src="/static/js/chat.js"></script>
+</body>
+</html>
